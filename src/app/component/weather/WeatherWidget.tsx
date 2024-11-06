@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 import { Typography, Box, Stack } from '@mui/material';
 import { WeatherModel } from '@/type/WeatherModel';
 import { MdAir, MdWaterDrop, MdSpeed } from 'react-icons/md';
@@ -27,7 +26,7 @@ export default function WeatherWidget({ weatherModel }: { weatherModel: WeatherM
                     {weatherModel.temp}°C
                 </Typography>
                 <Box sx={{ textAlign: 'right' }}>
-                    <Image
+                    <img
                         src={`https://openweathermap.org/img/wn/${weatherModel.icon}@2x.png`}
                         style={{ width: 50, height: 50 }}
                         alt={`Weather icon for ${weatherModel.description}`}
