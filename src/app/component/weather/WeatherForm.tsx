@@ -68,6 +68,7 @@ export default function WeatherForm() {
                             value={selectedCity}
                             onChange={(e) => setSelectedCity(e.target.value)}
                             label="Select City"
+                            aria-required="true"
                         >
                             {predefinedCities.map((city) => (
                                 <MenuItem key={city} value={city}>{city}</MenuItem>
@@ -83,6 +84,7 @@ export default function WeatherForm() {
                             value={customCity}
                             onChange={(e) => setCustomCity(e.target.value)}
                             margin="normal"
+                            inputProps={{ 'aria-label': 'Custom city name' }}
                         />
                     )}
                     <Button
@@ -97,7 +99,7 @@ export default function WeatherForm() {
                     </Button>
                     {loading && (
                         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
-                            <CircularProgress />
+                            <CircularProgress aria-label="Loading weather data"/>
                         </Box>
                     )}
                     {error && (

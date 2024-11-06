@@ -37,15 +37,15 @@ export default function WeatherWidget({ weatherModel }: { weatherModel: WeatherM
             </Stack>
             <Stack direction="row" spacing={1} sx={{ mb: 2 }}>
                 <Stack direction="row" alignItems="center" sx={{ flex: 1 }}>
-                    <MdAir />
+                    <MdAir aria-label="Wind speed" />
                     <Typography>{weatherModel.windSpeed} m/s</Typography>
                 </Stack>
                 <Stack direction="row" alignItems="center" sx={{ flex: 1 }}>
-                    <MdWaterDrop />
+                    <MdWaterDrop aria-label="Humidity" />
                     <Typography>{weatherModel.humidity}%</Typography>
                 </Stack>
                 <Stack direction="row" alignItems="center" sx={{ flex: 1 }}>
-                    <MdSpeed />
+                    <MdSpeed aria-label="Pressure" />
                     <Typography>{weatherModel.pressure} mmHg</Typography>
                 </Stack>
             </Stack>
