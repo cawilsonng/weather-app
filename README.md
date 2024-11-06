@@ -26,7 +26,7 @@ This project is a simple Next.js/React application that displays the current wea
    ```
 4. Create a `.env.local` file and add your OpenWeather API key:
    ```plaintext
-   NEXT_PUBLIC_OPENWEATHER_API_KEY=your_api_key
+   OPEN_WEATHER_API_KEY=your_api_key
    ```
 5. Run the application:
    ```bash
